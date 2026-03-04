@@ -10,7 +10,7 @@ const FONT = { display: "'Playfair Display', Georgia, serif", body: "'DM Sans', 
 const fmt = (n) => n ? "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : "—";
 const durMonths = { "1 Month (Trial)": 1, "3 Months": 3, "6 Months": 6, "12 Months": 12 };
 const getToday = () => new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-const STAGES = ["Prospecting", "Qualified", "Proposal Sent", "Negotiation", "Contract Sent", "Closed Won", "Closed Lost"];
+const STAGES = ["appointmentscheduled", "qualifiedtobuy", "presentationscheduled", "decisionmakerboughtin", "contractsent", "closedwon", "closedlost"];
 
 async function api(action, params) {
   const res = await fetch("/api/hubspot", {
