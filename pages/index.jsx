@@ -26,7 +26,7 @@ async function api(action, params) {
 function Spinner({ size = 16 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 16 16" style={{ animation: "spin .8s linear infinite", flexShrink: 0 }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+      <style dangerouslySetInnerHTML={{__html: "@keyframes spin{to{transform:rotate(360deg)}}"}} />
       <circle cx="8" cy="8" r="6" stroke={C.red} strokeWidth="2" fill="none" strokeDasharray="28" strokeDashoffset="10" />
     </svg>
   );
@@ -289,14 +289,7 @@ export default function App() {
 
   return (
     <div style={{ minHeight: "100vh", background: C.charcoal, fontFamily: FONT.body, color: C.white, display: "flex", flexDirection: "column" }}>
-      <style>{`
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #1E2023; }
-        ::-webkit-scrollbar-thumb { background: #3A3D42; border-radius: 3px; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-      `}</style>
+      <style dangerouslySetInnerHTML={{__html: "* { margin: 0; padding: 0; box-sizing: border-box; } input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #1E2023; } ::-webkit-scrollbar-thumb { background: #3A3D42; border-radius: 3px; } @keyframes spin { to { transform: rotate(360deg); } }"}} />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
