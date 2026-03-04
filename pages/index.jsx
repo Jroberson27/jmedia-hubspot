@@ -291,13 +291,15 @@ export default function App() {
     <div style={{ minHeight: "100vh", background: C.charcoal, fontFamily: FONT.body, color: C.white, display: "flex", flexDirection: "column" }}>
       <style>{`
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
         input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #1E2023; }
         ::-webkit-scrollbar-thumb { background: #3A3D42; border-radius: 3px; }
         @keyframes spin { to { transform: rotate(360deg); } }
       `}</style>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 
       <div style={{ background: C.charcoalMid, borderBottom: "1px solid " + C.border, padding: "0 28px", height: 54, display: "flex", alignItems: "center", justifyContent: "space-between", flexShrink: 0 }}>
         <div style={{ fontFamily: FONT.display, fontSize: 17, fontWeight: 700 }}>
